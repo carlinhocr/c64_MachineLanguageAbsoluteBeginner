@@ -17,7 +17,7 @@
     <Email />
     <AutoLaunchName>machinelanguageabsolutebeginner.prg</AutoLaunchName>
     <NoSingleFileBuild>False</NoSingleFileBuild>
-    <CreatedWithVersion>CBM prg Studio 3.14.0</CreatedWithVersion>
+    <CreatedWithVersion />
     <HasGitRepo>False</HasGitRepo>
     <GitIgnoreList />
     <Cartridge>
@@ -44,7 +44,7 @@
         <FileName>chap2_ex1.asm</FileName>
     </BuildList>
     <DetermineBuildOrder>0</DetermineBuildOrder>
-    <PaddingByte>0</PaddingByte>
+    <PaddingByte>234</PaddingByte>
     <!--Screen designer settings-->
     <AssyBinaryFileLocation />
     <AssyExportList />

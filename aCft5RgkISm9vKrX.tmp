@@ -1,3 +1,5 @@
+##{0:0:0:chap2_ex1.prg}\\Mac\Home\Documents\Programming\Commodore64\MachineLanguageAbsoluteBeginner\chap2_ex1.asm
+
 ; 10 SYS (2304)
 
 *=$0801
@@ -8,5 +10,6 @@
 
 *=$900
         lda #1
-        sta 1024
+        sta 1025
         rts
+
