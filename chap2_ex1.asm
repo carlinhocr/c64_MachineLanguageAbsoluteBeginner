@@ -9,4 +9,9 @@
 *=$900
         lda #1
         sta 1024
+        lda 5
+        sta 1025
+        lda 2049
+        sta 1026
         rts
+

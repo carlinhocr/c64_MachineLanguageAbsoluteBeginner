@@ -1,5 +1,3 @@
-##{0:0:0:chap2_ex3_hello.prg}\\Mac\Home\Documents\Programming\Commodore64\MachineLanguageAbsoluteBeginner\chap2_ex3_hello.asm
-
 ; 10 SYS (2304)
 
 *=$0801
@@ -20,4 +18,3 @@ START_SCREEN = $0400 ;first position of screen memory 1024, top right
         lda #15 ; screen display code for O
         sta START_SCREEN+4 ; print O once
         rts
-
