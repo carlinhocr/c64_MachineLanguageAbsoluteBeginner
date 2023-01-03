@@ -7,8 +7,8 @@
 
 
 *=$900
-        lda #3 ; inmediate addressing loading number 1
-        sta 1024 
+        lda #1 ; inmediate addressing loading number 1
+        sta 2048 
         lda 5 ; zero page addressing with memory address 5
         sta 2049
         lda 2050 ;absolute addressing with memory address 2049
