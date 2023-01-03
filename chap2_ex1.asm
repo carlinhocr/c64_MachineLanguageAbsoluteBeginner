@@ -7,11 +7,11 @@
 
 
 *=$900
-        lda #1
-        sta 1024
-        lda 5
-        sta 1025
-        lda 2049
-        sta 1026
+        lda #2 ; inmediate addressing loading number 1
+        sta 1024 
+        lda 5 ; zero page addressing with memory address 5
+        sta 2049
+        lda 2050 ;absolute addressing with memory address 2049
+        sta 2051 
         rts
 

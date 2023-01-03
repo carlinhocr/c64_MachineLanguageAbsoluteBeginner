@@ -7,12 +7,12 @@
 00007  0810             
 00008  0810             
 00009  0810             *=$900
-00010  0900  A9 01                 LDA #1
+00010  0900  A9 02                 LDA #2 ; INMEDIATE ADDRESSING LOADING NUMBER 1
 00011  0902  8D 00 04              STA 1024
-00012  0905  A5 05                 LDA 5
-00013  0907  8D 01 04              STA 1025
-00014  090A  AD 01 08              LDA 2049
-00015  090D  8D 02 04              STA 1026
+00012  0905  A5 05                 LDA 5 ; ZERO PAGE ADDRESSING WITH MEMORY ADDRESS 5
+00013  0907  8D 01 08              STA 2049
+00014  090A  AD 02 08              LDA 2050 ;ABSOLUTE ADDRESSING WITH MEMORY ADDRESS 2049
+00015  090D  8D 03 08              STA 2051
 00016  0910  60                    RTS
 00017  0911             
 00018  0911             
