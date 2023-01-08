@@ -22,4 +22,19 @@ WATCH $0338
         SBC #$05        ;as the carry is one it does  8 -5 -0 = 3
         STA $0335
 
+;lets do a negative number and see the carry flag cleared
+        LDA #$08
+        SEC             ;setting the carry bit
+        SBC #$0E        
+        STA $0336
+
+;substract E615 - 7198
+        LDA #$15        ;load the first low byte
+        SEC
+        SBC #$98        ;the carry flag is cleared to show the borrow
+        STA $0337
+        LDA #$E6
+        SBC #$71        ; E6-71-1 because of the clearead carry flag (0)
+        STA $0338
+
         RTS
