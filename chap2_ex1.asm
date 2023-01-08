@@ -6,7 +6,7 @@
 
 
 
-*=$900
+*=$900 
         lda #3 ; inmediate addressing loading number 1
         sta 1024 
         lda 5 ; zero page addressing with memory address 5
