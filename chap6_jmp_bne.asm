@@ -20,7 +20,6 @@
 REPITO  ADC #$01
         STA $D000
         CMP #$64
-        BEQ FIN
-        JMP REPITO ; jump to a label so as to not use the absolute memory address
+        BNE REPITO ; if less thatn 64 just repeat the loop
 
 FIN     RTS
