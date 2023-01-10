@@ -20,6 +20,6 @@
 REPITO  ADC #$01
         STA $D000
         CMP #$64
-        BNE REPITO ; if less than 64 just repeat the loop
+        BCC REPITO ; if less than 64 just repeat the loop
 
 FIN     RTS
