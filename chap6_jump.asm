@@ -21,6 +21,7 @@ REPITO  ADC #$01
         STA $D000
         CMP #$64
         BEQ FIN
-        JMP REPITO ; jump to a label so as to not use the absolute memory address
-
+        JMP REPITO      ; jump to a label so as to not use the absolute 
+                        ; memory address that is 0916
+                     
 FIN     RTS
