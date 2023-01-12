@@ -7,7 +7,7 @@ WATCH $0334
 
 *=$900 
 
-; MULTIPLY 7 X 3 
+; MULTIPLY 7 X 3 using X register
 
         LDX #$03
         LDA #$00
