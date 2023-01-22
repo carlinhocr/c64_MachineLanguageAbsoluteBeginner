@@ -3,7 +3,7 @@
 *=$0801
 
         BYTE    $0E, $08, $0A, $00, $9E, $20, $28,  $32, $33, $30, $34, $29, $00, $00, $00
-=*$0900
+*=$0900
 
 ;copy charecter sets to $CE00 and $CF00
 
@@ -29,4 +29,7 @@ LOADMORECHARS
         LDA #$01
         ORA $DC0E
         STA $DC0E
+;look up a list of letters to print
+
+
         RTS
