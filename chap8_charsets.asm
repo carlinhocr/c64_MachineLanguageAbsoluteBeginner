@@ -7,10 +7,11 @@
 
 ;copy charecter sets to $CE00 and $CF00
 
-        LDA #$FE
-        AND $DC0E       ; Timer A control Register Memory Address
-        STA $DC0E
-        LDA #$FB
+        
+        LDA #$FE        ;1111 1110 a mask that turns bit 0 Off (to 0)
+        AND $DC0E       ;Timer A control Register Memory Address
+        STA $DC0E       ;Bit #0: 0 = Stop timer; 1 = Start timer (Stops Timer)
+        LDA #$FB        ;1111 1011 a mask that turns off bit 2 (to 0)
         AND $01         ;Processor Port Memory Bits
         STA $01         ;set the %0xx: Character ROM visible at $D000-$DFFF. 
         LDX #$00        ;set the counter X at zero
@@ -23,12 +24,14 @@ LOADMORECHARS
         INX             ; increment the index
         BNE LOADMORECHARS ;branch if X <> 0 so it will repeat 255 times
 
-        LDA #$04
-        ORA $01
-        STA $01
-        LDA #$01
-        ORA $DC0E
-        STA $DC0E
+        LDA #$04        ;0000 0100 mask to turn on bit 2 (to 1)
+        ORA $01         ;Processor Port Memory Bits
+        STA $01         ;%1xx: I/O area visible at $D000-$DFFF. (Except for the value %100, see above.)
+                        ;%x00: RAM visible in all three areas.
+        LDA #$01        ;0000 0001 mask to turn on bit 0 (to 1)
+        ORA $DC0E       ;Timer A control Register Memory Address
+        STA $DC0E       ;Bit #0: 0 = Stop timer; 1 = Start timer (Starts timer)
+
 ;look up a list of letters to print "HELLO"
 
         LDA #$08        ;H
@@ -72,6 +75,8 @@ STORECOLOURMEM
         ;Bit #7: Read: Current raster line (bit #8).
         ;Write: Raster line to generate interrupt at (bit #8).
         LDA #$3B ;0011 1011 Bit 5 is 1 => bitmap mode
+                 ; bit 4 is 1 => Screen on
+                 ; bit 3 is 1 => Screen height 25 rows
         STA $D011
         
         ;Position Pointer
