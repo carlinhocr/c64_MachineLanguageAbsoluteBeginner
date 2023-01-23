@@ -54,7 +54,14 @@ STORECOLOURMEM
         ;Memory setup register. Bits
         LDA #$10
         STA $D018   
-        
+        ;Set low nad hight byte at zero page for indirect addressing
+        ;choosing with character table to use
+        ;LDA #$CF ;hight byte use for UPPER CASE
+        LDA #$CE ;high byte use for LOWER CASE
+        STA $FE  ;store high byte in zero page
+        LDA #$00 ;low bytes
+        STA $FD  ;store low byte in zero page
+
         ;Set up Graphics Mode
         ;Screen control register #1. Bits:
         ;Bits #0-#2: Vertical raster scroll.
@@ -91,7 +98,8 @@ READCHARACTER
         STA $CC02
         ;copy data from the table to the screen
 COPYDATA
-        LDA $CE00,Y
+        ;LDA $CE00,Y direct addressing
+        LDA ($FD),Y ;indirect addressing
         INY
         STA $0400,X
         INX
