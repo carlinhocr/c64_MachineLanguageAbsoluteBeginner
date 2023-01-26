@@ -87,6 +87,17 @@
             <FileOpen>True</FileOpen>
         </SourceFile>
         <SourceFile>
+            <Name>chap10_multiply_ROR.asm</Name>
+            <PrgName />
+            <FileType>2</FileType>
+            <IncludeInBuild>True</IncludeInBuild>
+            <Regions />
+            <Breakpoints />
+            <Bookmarks />
+            <Topmost>False</Topmost>
+            <FileOpen>True</FileOpen>
+        </SourceFile>
+        <SourceFile>
             <Name>chap2_ex1.asm</Name>
             <PrgName />
             <FileType>2</FileType>
@@ -307,17 +318,6 @@
             <Breakpoints />
             <Bookmarks />
             <Topmost>False</Topmost>
-            <FileOpen>True</FileOpen>
-        </SourceFile>
-        <SourceFile>
-            <Name>chap10_multiply_ROR.asm</Name>
-            <PrgName />
-            <FileType>2</FileType>
-            <IncludeInBuild>True</IncludeInBuild>
-            <Regions />
-            <Breakpoints />
-            <Bookmarks />
-            <Topmost>True</Topmost>
             <FileOpen>True</FileOpen>
         </SourceFile>
     </SourceFiles>
