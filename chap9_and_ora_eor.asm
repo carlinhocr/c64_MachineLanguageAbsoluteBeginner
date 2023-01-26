@@ -7,3 +7,8 @@
 
 ;test the AND, ORA, EOR instructions
 
+        LDA #$CA        ;1100 1010 TO THE ACCUMULATOR
+        AND #$9F        ; AND 1100 1010
+                        ;     1001 1111
+                        ;----------------
+        STA $0334       ;     1000 1010
