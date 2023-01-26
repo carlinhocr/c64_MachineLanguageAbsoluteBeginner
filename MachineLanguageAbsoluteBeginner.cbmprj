@@ -64,7 +64,7 @@
         <FileName>chap7_double_counter.asm</FileName>
         <FileName>chap7_zeropage_double_counter.asm</FileName>
         <FileName>chap8_charsets.asm</FileName>
-        <FileName>chap9_and_ora_eor.asm</FileName>
+        <FileName>chap10_and_ora_eor.asm</FileName>
     </BuildList>
     <DetermineBuildOrder>0</DetermineBuildOrder>
     <PaddingByte>234</PaddingByte>
@@ -74,6 +74,17 @@
     <RawExportList />
     <!--End of screen designer settings-->
     <SourceFiles>
+        <SourceFile>
+            <Name>chap10_and_ora_eor.asm</Name>
+            <PrgName />
+            <FileType>2</FileType>
+            <IncludeInBuild>True</IncludeInBuild>
+            <Regions />
+            <Breakpoints />
+            <Bookmarks />
+            <Topmost>False</Topmost>
+            <FileOpen>True</FileOpen>
+        </SourceFile>
         <SourceFile>
             <Name>chap2_ex1.asm</Name>
             <PrgName />
@@ -288,17 +299,6 @@
         </SourceFile>
         <SourceFile>
             <Name>chap8_charsets.asm</Name>
-            <PrgName />
-            <FileType>2</FileType>
-            <IncludeInBuild>True</IncludeInBuild>
-            <Regions />
-            <Breakpoints />
-            <Bookmarks />
-            <Topmost>False</Topmost>
-            <FileOpen>True</FileOpen>
-        </SourceFile>
-        <SourceFile>
-            <Name>chap9_and_ora_eor.asm</Name>
             <PrgName />
             <FileType>2</FileType>
             <IncludeInBuild>True</IncludeInBuild>
