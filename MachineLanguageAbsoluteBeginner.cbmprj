@@ -65,6 +65,7 @@
         <FileName>chap7_zeropage_double_counter.asm</FileName>
         <FileName>chap8_charsets.asm</FileName>
         <FileName>chap10_and_ora_eor.asm</FileName>
+        <FileName>chap10_multiply_ROR.asm</FileName>
     </BuildList>
     <DetermineBuildOrder>0</DetermineBuildOrder>
     <PaddingByte>234</PaddingByte>
@@ -306,6 +307,17 @@
             <Breakpoints />
             <Bookmarks />
             <Topmost>False</Topmost>
+            <FileOpen>True</FileOpen>
+        </SourceFile>
+        <SourceFile>
+            <Name>chap10_multiply_ROR.asm</Name>
+            <PrgName />
+            <FileType>2</FileType>
+            <IncludeInBuild>True</IncludeInBuild>
+            <Regions />
+            <Breakpoints />
+            <Bookmarks />
+            <Topmost>True</Topmost>
             <FileOpen>True</FileOpen>
         </SourceFile>
     </SourceFiles>
