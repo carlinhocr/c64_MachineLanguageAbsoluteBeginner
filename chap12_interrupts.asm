@@ -43,4 +43,29 @@
         JSR $FF9F
         ;load X with the lenght of the input buffer
         ;pointer to the next empty space in the buffer
+        LDX $C6
+        ;if buffer empty, so no key pressed return
+        BEQ ENDPRG
+        ;point the pointer to the previous entry in the buffer
+        DEX
+        ;load the previous character if it is not F1 then return
+        LDA $0277,X
+        CMP #$85 ;F1
+        BNE ENDPRG
+        ;as F1 was pressend put the string LIST+<RETURN> 
+        ;on the keyboard buffer
+        LDY #$FF ; so that when Y is incremented the first time it starts at zero
+LOADKEYS
+        INY
+        INX
+        LDA $CFF0,Y
+        STA $0277,X
+        BNE LOADKEYS ; our last character is zero if we do not ereache it then keep loading characters
+        ;save the new poiter to the buffer lenght
+        STX $C6
+        
 
+ENDPRG
+        ;returns via rom interrupt handler
+        JMP $EA31
+        
