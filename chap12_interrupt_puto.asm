@@ -10,16 +10,14 @@
 ;initialization routine
         
         ;set up in memory the string LIST + RETURN and a zero signifying end of string
-        LDA #$4C        ;L
+        LDA #$50       
         STA $CFF0
-        LDA #$49        ;I
+        LDA #$55      
         STA $CFF1
-        LDA #$53        ;S
+        LDA #$54
         STA $CFF2
-        LDA #$54        ;T
+        LDA #$4F
         STA $CFF3
-        LDA #$0d        ;<RETURN>
-        STA $CFF4
         LDA #$00
         STA $CFF5
         ;turn off the interrupts by setting the interrupt flag
@@ -50,7 +48,7 @@
         DEX
         ;load the previous character if it is not F1 then return
         LDA $0277,X
-        CMP #$85 ;F1
+        CMP #$86 ;F3
         BNE ENDPRG
         ;as F1 was pressend put the string LIST+<RETURN> 
         ;on the keyboard buffer
