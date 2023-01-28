@@ -19,7 +19,7 @@
         LDA #$4F
         STA $CFF3
         LDA #$00
-        STA $CFF5
+        STA $CFF4
         ;turn off the interrupts by setting the interrupt flag
         ;this must be donde before changing the interrupt vector
         SEI
