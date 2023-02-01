@@ -75,6 +75,7 @@
         <FileName>chap12_interrupt_puto.asm</FileName>
         <FileName>append7_song.asm</FileName>
         <FileName>appendix7_song.bas</FileName>
+        <FileName>appendix7_happybirthday.bas</FileName>
     </BuildList>
     <DetermineBuildOrder>0</DetermineBuildOrder>
     <PaddingByte>234</PaddingByte>
@@ -84,6 +85,17 @@
     <RawExportList />
     <!--End of screen designer settings-->
     <SourceFiles>
+        <SourceFile>
+            <Name>appendix7_happybirthday.bas</Name>
+            <PrgName />
+            <FileType>1</FileType>
+            <IncludeInBuild>True</IncludeInBuild>
+            <Regions />
+            <Breakpoints />
+            <Bookmarks />
+            <Topmost>False</Topmost>
+            <FileOpen>False</FileOpen>
+        </SourceFile>
         <SourceFile>
             <Name>appendix7_song.bas</Name>
             <PrgName />
